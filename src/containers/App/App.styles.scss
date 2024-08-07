@@ -1,0 +1,50 @@
+$header_height: 75px;
+$main_height: calc(100vh - $header_height);
+
+.App {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+
+  header {
+    height: $header_height;
+    background-color: #F8F4E3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+
+      .logo-image {
+        max-height: 100%; // Garante que a altura do SVG não ultrapasse a altura do cabeçalho
+        max-width: 100%; // Garante que a largura do SVG não ultrapasse a largura disponível
+        height: auto; // Mantém a proporção original do SVG
+        width: auto; // Mantém a proporção original do SVG
+      }
+    }
+  }
+
+  main {
+    display: flex;
+    flex-direction: row;
+    height: $main_height;
+    width: 100%;
+    background: #003366;
+
+    .image-input-div {
+      flex: 1;
+      margin-right: 20px;
+      padding: 5px;
+    }
+
+    .text-image-div {
+      flex: 1;
+      padding: 5px;
+    }
+  }
+}

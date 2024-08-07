@@ -1,0 +1,24 @@
+.textBox {
+  width: 90%;
+  height: 90%;
+  padding: 10px;
+  border: 3px solid #706C61;
+  border-radius: 4px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-y: scroll;
+  margin: 10px;
+  background-color: #F8F4E3;
+
+  &.empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+  }
+
+  .imageText {
+    text-align: justify;
+    padding: 2%;
+  }
+}
