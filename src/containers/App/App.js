@@ -55,10 +55,12 @@ const App = () => {
     if (image) {
       setLoading(true);
       try {
-        const response = await axios.post("localhost:8000/read_image_text", {
-          image,
+        const response = await axios.post("http://127.0.0.1:5000/read_image_text", {
+          'image_b64': image.split(",")[1],
         });
+        console.log(response)
         setText(response.data.text);
+        console.log(text)
       } catch (error) {
         console.error("Error recognizing text:", error);
       } finally {
